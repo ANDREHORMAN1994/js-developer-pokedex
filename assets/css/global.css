@@ -4,6 +4,8 @@
 }
 
 body {
+  width: 100vw;
+  margin: auto;
   background-color: #6c79dca9;
   color: #333;
 }
