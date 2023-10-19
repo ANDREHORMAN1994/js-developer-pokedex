@@ -58,7 +58,7 @@
   height: 70px;
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 375px) {
   .pokemon-list {
     grid-template-columns: repeat(2, 1fr);
   }
