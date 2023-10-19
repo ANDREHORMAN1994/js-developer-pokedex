@@ -3,7 +3,6 @@ const mainEl = document.querySelector('#main-content');
 const headerEl = document.querySelector('.header');
 const infosEl = document.querySelector('.infos-container');
 const loadingElement = document.querySelector('.loading');
-const btnHomeEl = document.querySelector('.btn-home');
 
 const createTitleEl = ({ order, name, types }) => {
   const header = `
@@ -28,21 +27,37 @@ const createImgEl = ({ img }) => {
 }
 
 const createAboutPokemonEl = ({ name, height, weight, abilities, status }) => {
-  const formatAbilities = abilities.join(', ');
+  const formatAbilities = abilities.map((i) => (
+    i === abilities.at(-1) ? `<span>${i}</span>` : `<span>${i},</span>`
+  )).join('');
 
   const aboutPokemonEl = `
     <div class="about-container">
       <h3>Estatísticas do ${name}</h3>
-      <p><strong>Altura:</strong> ${height/10} metros</p>
-      <p><strong>Peso:</strong> ${weight/10} kg</p>
-      <p><strong>HP:</strong> ${status.hp}</p>
-      <p><strong>Ataque:</strong> ${status.attack}</p>
-      <p><strong>Defesa:</strong> ${status.defense}</p>
-      <p><strong>Velocidade:</strong> ${status.speed}</p>
-      <p><strong>Habilidades:</strong> ${formatAbilities}</p>
+      <p><span class="item">Altura:</span> ${height / 10} metros</p>
+      <p><span class="item">Peso:</span> ${weight / 10} kg</p>
+      <p><span class="item">HP:</span> ${status.hp}</p>
+      <p><span class="item">Ataque:</span> ${status.attack}</p>
+      <p><span class="item">Defesa:</span> ${status.defense}</p>
+      <p><span class="item">Velocidade:</span> ${status.speed}</p>
+      <p>
+        <span class="item">Habilidades:</span>
+        <span class="ability">${formatAbilities}</span>
+      </p>
+
+      <button type="button" class="btn-home">
+        <img src="./assets/images/home.svg" alt="Tela inicial">
+      </button>
     </div>
   `;
   infosEl.innerHTML += aboutPokemonEl;
+}
+
+const handleBtnHome = () => {
+  const btnHomeEl = document.querySelector('.btn-home');
+  btnHomeEl.addEventListener('click', () => {
+    window.location.href = '../index.html';
+  });
 }
 
 const getPokemonDetails = async () => {
@@ -51,20 +66,14 @@ const getPokemonDetails = async () => {
   const endpoint = `https://pokeapi.co/api/v2/pokemon/${id}`;
   const pokemon = await requestPokeDetails(endpoint);
   loadingElement.style.display = 'none';
-  
+
   bodyEl.classList.add(pokemon.type);
   createTitleEl(pokemon);
   createImgEl(pokemon);
   createAboutPokemonEl(pokemon);
-}
-
-const handleBtnHome = () => {
-  btnHomeEl.addEventListener('click', () => {
-    window.location.href = '../index.html';
-  });
+  handleBtnHome();
 }
 
 window.onload = () => {
-  handleBtnHome();
   getPokemonDetails();
 }

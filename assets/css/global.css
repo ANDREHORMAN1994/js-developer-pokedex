@@ -69,6 +69,12 @@ button.btn {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 700;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 #btn-container button:hover {
@@ -87,7 +93,7 @@ a {
     max-width: 992px;
     margin: 1rem auto;
     border-radius: 1rem;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
     overflow-y: scroll;
   }
 }
