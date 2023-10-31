@@ -28,6 +28,7 @@ Para executar a aplicação, realize os passos a seguir:
 * Instale as dependências do projeto --> `npm install`.
 * Execute a aplicação --> `npm run dev`.
 
+<br />
 <p align="center">
   <img alt="preview do projeto" width="650px" src="./.github/pokedex-vanilla.gif" />
 <p>
