@@ -1,6 +1,6 @@
 <h1 align="center">
-  <span><img alt="Happy" src="./assets/images/pokeball.svg" height="50px" /></span> &nbsp;
-  Pokédex Vanilla
+  <p><img alt="Happy" src="./assets/images/pokeball.svg" height="100px" /></p>
+  <span>Pokédex Vanilla</span>
 </h1>
 
 <p align="center">
