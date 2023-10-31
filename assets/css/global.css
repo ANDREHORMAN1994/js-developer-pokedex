@@ -6,7 +6,7 @@
 body {
   width: 100vw;
   margin: auto;
-  background-color: #6c79dca9;
+  background-color: #6C79DCA9;
   color: #333;
 }
 
@@ -73,12 +73,12 @@ button.btn {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  align-items: end;
+  gap: .5rem;
 }
 
 #btn-container button:hover {
-  filter: brightness(1.2);
+  filter: brightness(.8);
   cursor: pointer;
 }
 

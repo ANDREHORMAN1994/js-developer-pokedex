@@ -28,6 +28,10 @@ Para executar a aplicação, realize os passos a seguir:
 * Instale as dependências do projeto --> `npm install`.
 * Execute a aplicação --> `npm run dev`.
 
+<p align="center">
+  <img alt="preview do projeto" width="650px" src="./.github/pokedex-vanilla.gif" />
+<p>
+
 
 ## :rocket: Tecnologias
 
@@ -44,7 +48,6 @@ Para executar a aplicação, realize os passos a seguir:
 
 
 ## :paintbrush: Layout
-
 
 Inspirei-me no [Layout](https://dribbble.com/shots/6540871-Pokedex-App/attachments/6540871-Pokedex-App?mode=media) criado por **Saepul Nahwan** para orientar o meu projeto.
 

@@ -18,6 +18,11 @@
   flex-direction: column;
 }
 
+.pokemon:hover {
+  cursor: pointer;
+  filter: brightness(.8);
+}
+
 .pokemon .name {
   color: #fff;
   margin-bottom: .25rem;

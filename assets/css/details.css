@@ -106,20 +106,27 @@ div.about-container {
 }
 
 div.about-container h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+div.about-container hr {
+  width: 90%;
+  opacity: .3;
   margin: 0;
   margin-bottom: 1rem;
-  font-weight: 700;
-  font-size: 1.2rem;
 }
 
 div.about-container p {
   font-size: 1rem;
   margin: 0;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
-  align-items: center;
+  align-items: baseline;
   gap: .5rem;
 }
 
@@ -151,7 +158,7 @@ button.btn-home {
 
 button.btn-home:hover {
   cursor: pointer;
-  filter: brightness(1.1);
+  filter: brightness(.8);
 }
 
 @media screen and (min-width: 768px) {
@@ -262,10 +269,22 @@ button.btn-home:hover {
 
 @media screen and (min-width: 1440px) {
   div.about-container {
-    padding: 5rem 2rem;
+    padding: 3rem;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  div.about-container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  div.about-container hr {
+    margin-bottom: 2rem;
   }
 
   div.about-container p {
+    font-size: 1.5rem;
     gap: 5rem;
   }
   
